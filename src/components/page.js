@@ -16,7 +16,7 @@ export default function Page() {
       setShortenUrl('');
       setLoading(true);
       setError("")
-      axios.post(`${apiUrl}`, { longUrl })
+      axios.post(`${apiUrl}/url/shorten`, { longUrl })
         .then((response) => {
           setShortenUrl(response.data.data.shortUrl);
           setDisableButton(true);
